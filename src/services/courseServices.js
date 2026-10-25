@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:3100';
+const apiUrl = '';
 
 export function getCourses() {
     return axios.get(`${apiUrl}/courses`);

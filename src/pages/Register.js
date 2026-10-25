@@ -25,7 +25,7 @@ const Register = () => {
 
         try {
             // Use the actual local backend endpoint
-            const apiUrl = process.env.REACT_APP_BACKEND_URL || "http://localhost:3100";
+            const apiUrl = (process.env.REACT_APP_BACKEND_URL || "").replace(/\/$/, "");
 
             await axios.post(`${apiUrl}/register`, formData);
 
